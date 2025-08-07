@@ -276,9 +276,7 @@ Trả lời câu hỏi một cách tự nhiên và ngắn gọn, chỉ trả v�
 
           var rooms = snapshot.docs.map((doc) {
             final data = doc.data();
-            final price = (data['price'] is int)
-                ? (data['price'] as int).toDouble()
-                : (data['price'] as double?);
+            final price = (data['price'] as num?)?.toDouble();
             return {
               'id': doc.id,
               'name': data['name'] as String?,
@@ -313,9 +311,7 @@ Trả lời câu hỏi một cách tự nhiên và ngắn gọn, chỉ trả v�
             if (rooms.isEmpty) {
               rooms = snapshot.docs.map((doc) {
                 final data = doc.data();
-                final price = (data['price'] is int)
-                    ? (data['price'] as int).toDouble()
-                    : (data['price'] as double?);
+                final price = (data['price'] as num?)?.toDouble();
                 return {
                   'id': doc.id,
                   'name': data['name'] as String?,
@@ -361,9 +357,7 @@ Trả lời câu hỏi một cách tự nhiên và ngắn gọn, chỉ trả v�
 
             final allRooms = allRoomsSnapshot.docs.map((doc) {
               final data = doc.data();
-              final price = (data['price'] is int)
-                  ? (data['price'] as int).toDouble()
-                  : (data['price'] as double?);
+              final price = (data['price'] as num?)?.toDouble();
               return {
                 'id': doc.id,
                 'name': data['name'] as String?,
@@ -454,9 +448,7 @@ Trả lời câu hỏi một cách tự nhiên và ngắn gọn, chỉ trả v�
                       type)
                   .map((doc) {
                 final data = doc.data();
-                final price = (data['price'] is int)
-                    ? (data['price'] as int).toDouble()
-                    : (data['price'] as double?);
+                final price = (data['price'] as num?)?.toDouble();
                 return {
                   'id': doc.id,
                   'name': data['name'] as String?,
@@ -484,9 +476,7 @@ Trả lời câu hỏi một cách tự nhiên và ngắn gọn, chỉ trả v�
 
                 final allRooms = allRoomsSnapshot.docs.map((doc) {
                   final data = doc.data();
-                  final price = (data['price'] is int)
-                      ? (data['price'] as int).toDouble()
-                      : (data['price'] as double?);
+                  final price = (data['price'] as num?)?.toDouble();
                   return {
                     'id': doc.id,
                     'name': data['name'] as String?,
@@ -539,9 +529,7 @@ Trả lời câu hỏi một cách tự nhiên và ngắn gọn, chỉ trả v�
 
         final room = roomSnapshot.docs.first;
         final roomData = room.data();
-        final price = (roomData['price'] is int)
-            ? (roomData['price'] as int).toDouble()
-            : (roomData['price'] as double?);
+        final price = (roomData['price'] as num?)?.toDouble();
         _lastSuggestedRoomType =
             _normalizeRoomType(roomData['type'] as String? ?? '');
         _lastRoomTypeContext = _lastSuggestedRoomType;
@@ -584,9 +572,7 @@ Trả lời câu hỏi một cách tự nhiên và ngắn gọn, chỉ trả v�
 
           final allRooms = allRoomsSnapshot.docs.map((doc) {
             final data = doc.data();
-            final price = (data['price'] is int)
-                ? (data['price'] as int).toDouble()
-                : (data['price'] as double?);
+            final price = (data['price'] as num?)?.toDouble();
             return {
               'id': doc.id,
               'name': data['name'] as String?,
@@ -616,9 +602,7 @@ Trả lời câu hỏi một cách tự nhiên và ngắn gọn, chỉ trả v�
 
         final rooms = snapshot.docs.map((doc) {
           final data = doc.data();
-          final price = (data['price'] is int)
-              ? (data['price'] as int).toDouble()
-              : (data['price'] as double?);
+          final price = (data['price'] as num?)?.toDouble();
           return {
             'id': doc.id,
             'name': data['name'] as String?,
@@ -671,9 +655,7 @@ Trả lời câu hỏi một cách tự nhiên và ngắn gọn, chỉ trả v�
 
           final rooms = snapshot.docs.map((doc) {
             final data = doc.data();
-            final price = (data['price'] is int)
-                ? (data['price'] as int).toDouble()
-                : (data['price'] as double?);
+            final price = (data['price'] as num?)?.toDouble();
             return {
               'id': doc.id,
               'name': data['name'] as String?,
