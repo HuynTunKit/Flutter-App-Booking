@@ -203,7 +203,7 @@ class _BookingHistoryScreenState extends State<BookingHistoryScreen>
                                   bookingId: bookingId,
                                   roomId: bookingData['roomId'] as String,
                                   roomName: roomName,
-                                  price: int.parse(price),
+                                  price: double.tryParse(price) ?? 0.0,
                                   bookingTime: bookingTime,
                                   checkInDate: checkInDate,
                                   checkOutDate: checkOutDate,

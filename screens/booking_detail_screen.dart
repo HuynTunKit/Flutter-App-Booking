@@ -11,7 +11,7 @@ class BookingDetailScreen extends StatefulWidget {
   final String bookingId;
   final String roomId;
   final String roomName;
-  final int price;
+  final double price;
   final Timestamp bookingTime;
   final Timestamp checkInDate;
   final Timestamp checkOutDate;
